@@ -2,11 +2,9 @@
 import InputHelper as IH
 
 
-# Day 2 Part 1
 def solve1(lines):
 	return compute(convert(lines), lambda i: i + 1)
 
-# Day 2 Part 2
 def solve2(lines):
 	return compute(convert(lines), lambda i: i + 1 if i < 3 else i - 1)
 

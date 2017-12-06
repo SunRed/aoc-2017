@@ -2,30 +2,23 @@
 import InputHelper as IH
 
 
-# Day 1 Part 1
 def solve1(string):
-	digits = list(string)
-	length = len(digits)
-	total = 0
+	return compute(string, lambda i,l: i+1)
 
-	for i, digit in enumerate(digits):
-		next = (i+1) % length
-		total += int(digit) if digit == digits[next] else 0
-
-	return total
-
-# Day 1 Part 2
 def solve2(string):
+	return compute(string, lambda i,l: i+l//2)
+
+
+def compute(string, cond):
 	digits = list(string)
 	length = len(digits)
 	total = 0
 
 	for i, digit in enumerate(digits):
-		next = (i+length//2) % length
+		next = cond(i, length) % length
 		total += int(digit) if digit == digits[next] else 0
 
 	return total
-
 
 # Read from stdin or else input file
 data = IH.InputHelper(1).read().strip()

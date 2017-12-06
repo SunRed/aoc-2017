@@ -2,11 +2,9 @@
 import InputHelper as IH
 
 
-# Day 2 Part 1
 def solve1(lines):
 	return sum([ max(line) - min(line) for line in convert(lines) ])
 
-# Day 2 Part 2
 def solve2(lines):
 	return sum([ get_divisible(line) for line in convert(lines) ])
 

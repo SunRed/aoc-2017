@@ -2,11 +2,9 @@
 import InputHelper as IH
 
 
-# Day 2 Part 1
 def solve1(lines):
 	return compute(lines, lambda w1, w2: w1 == w2)
 
-# Day 2 Part 2
 def solve2(lines):
 	return compute(lines, lambda w1, w2: is_anagram(w1, w2))
 

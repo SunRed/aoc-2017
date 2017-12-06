@@ -2,17 +2,15 @@
 import InputHelper as IH
 
 
-# Day 2 Part 1
 def solve1(string):
 	return compute(convert(string))[0]
 
-# Day 2 Part 2
 def solve2(string):
 	return compute(compute(convert(string))[1])[0]
 
 
 def convert(string):
-	return [ int(n) for n in string.strip().split('\t') ]
+	return [ int(n) for n in string.split('\t') ]
 
 def compute(array):
 	counter = 0;
@@ -36,6 +34,6 @@ def compute(array):
 
 
 # Read from stdin or else from input file
-data = IH.InputHelper(6).read()
+data = IH.InputHelper(6).read().strip()
 print("Part 1: " + str(solve1(data)))
 print("Part 2: " + str(solve2(data)))

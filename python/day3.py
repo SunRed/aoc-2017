@@ -2,7 +2,6 @@
 import InputHelper as IH
 
 
-# Day 2 Part 1
 def solve1(pinput):
 	direction = 1;
 
@@ -37,7 +36,6 @@ def solve1(pinput):
 
 	return abs(north) + abs(east)
 
-# Day 2 Part 2
 def solve2(pinput):
 	return "not implemented yet"
 
